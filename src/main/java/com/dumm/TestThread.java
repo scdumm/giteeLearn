@@ -27,8 +27,8 @@ public class TestThread {
 //
 
         ThreadFactory namedThreadFactory = new ThreadFactoryBuilder().setNameFormat("demo-pool-%d").build();
-
-        //Common Thread Pool
+//        Executors.newFixedThreadPool(10).execute(); 不推荐使用了
+        //Common Thread Pool 推荐方式 这样的处理方式可以更加明确线程池的运行规则，规避资源耗尽的风险。
         ExecutorService threadPool = new ThreadPoolExecutor(5, 200,0L, TimeUnit.MILLISECONDS,new LinkedBlockingQueue<Runnable>(1024), namedThreadFactory, new ThreadPoolExecutor.AbortPolicy());
 //
         threadPool.execute(new TestThread(). new Myrun());
