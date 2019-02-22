@@ -1,4 +1,4 @@
-package com.dumm;
+package com.dumm.thread;
 /**
  * Created by dumm on 2019/2/19.
  */

@@ -1,4 +1,4 @@
-package com.dumm;
+package com.dumm.thread;
 
 
 import com.google.common.util.concurrent.ThreadFactoryBuilder;
